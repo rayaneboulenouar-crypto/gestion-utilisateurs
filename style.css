@@ -1,0 +1,254 @@
+/* style.css */
+/* Styles generaux partages par toutes les pages */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2, h3 {
+  color: #2f4f2f;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  font-size: 15px;
+  background-color: var(--couleur-theme, #4caf50);
+  color: white;
+  transition: filter 0.15s ease-in-out;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.liste-erreurs {
+  color: #d32f2f;
+  margin-top: 12px;
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+.ligne-case-a-cocher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.ligne-case-a-cocher input {
+  width: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #2f4f2f;
+  color: white;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tbody tr {
+  transition: background-color 0.15s ease-in-out;
+}
+
+table tbody tr:hover {
+  background-color: #eef2ee;
+}
+
+@media (max-width: 700px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Messages qui remplacent les alert() */
+.message {
+  display: none;
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 14px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.message-succes {
+  background-color: #e6f4ea;
+  color: #1e7e34;
+  border: 1px solid #b7e1c1;
+}
+
+.message-erreur {
+  background-color: #fdecea;
+  color: #c0392b;
+  border: 1px solid #f5c6cb;
+}
+
+.message-info {
+  background-color: #eaf3fb;
+  color: #2a6496;
+  border: 1px solid #bcdff1;
+}
+
+/* Indicateur de chargement simple, sans animation */
+.indicateur-chargement {
+  display: none;
+  color: #666;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+/* Champ mot de passe avec bouton afficher/cacher */
+.champ-mot-de-passe {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.champ-mot-de-passe input {
+  flex: 1;
+  margin-top: 0;
+}
+
+.bouton-oeil {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  background-color: #eef2ee;
+  color: #333;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bouton-oeil:hover {
+  background-color: #dfe8df;
+}
+
+/* Barre de recherche */
+.barre-recherche {
+  margin-bottom: 16px;
+  max-width: 320px;
+}
+
+.sous-titre-page {
+  color: #666;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 18px;
+}
+
+.boite-formulaire-demande:not(:empty) {
+  background-color: #f9faf9;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin-bottom: 24px;
+}
+
+.boite-formulaire-demande h3 {
+  margin-top: 0;
+}
+.avatar-utilisateur {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.message-info {
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: white;
+}
+
+.badge-attente { background-color: #f0ad4e; }
+.badge-approuvee { background-color: #4caf50; }
+.badge-rejetee { background-color: #d9534f; }
+
+.grille-formulaire {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+  margin-bottom: 20px;
+}
+
+.grille-formulaire .pleine-largeur {
+  grid-column: 1 / -1;
+}
+
+.champ {
+  display: flex;
+  flex-direction: column;
+}
+
+.actions-cellule button,
+.actions-demande button {
+  margin-right: 6px;
+  margin-bottom: 4px;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+
+@media (max-width: 700px) {
+  .grille-formulaire {
+    grid-template-columns: 1fr !important;
+  }
+}

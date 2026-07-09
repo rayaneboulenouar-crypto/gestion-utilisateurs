@@ -1,0 +1,32 @@
+<head>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+
+<div class="page-demandes">
+  <h2>Gestion des demandes</h2>
+  <p id="descriptionDemandes" class="sous-titre-page"></p>
+
+  <div id="messageDemandes" class="message"></div>
+
+  <div id="zoneFormulaireDemande" class="boite-formulaire-demande">
+    <!-- Formulaire de creation de demande, visible uniquement pour les visiteurs -->
+  </div>
+
+  <h3 id="titreListeDemandes">Demandes</h3>
+  <table id="tableDemandes">
+    <thead>
+      <tr>
+        <th>Titre</th>
+        <th>Description</th>
+        <th>Auteur</th>
+        <th>Statut</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="corpsTableDemandes">
+      <!-- Lignes generees en JavaScript -->
+    </tbody>
+  </table>
+
+  <p id="messageAucuneDemande" class="message message-info" style="display:none;">Aucune demande.</p>
+</div>

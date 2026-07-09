@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Créer un compte - Espace Stagiaire</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/createAccount.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+  <div class="conteneur-creation">
+    <form id="formulaireCreation" class="carte-creation">
+      <h1>Creer un compte</h1>
+
+      <div class="grille-formulaire">
+        <div class="champ">
+          <label for="nom">Nom</label>
+          <input type="text" id="nom" name="nom" placeholder="Ex : Alaoui">
+        </div>
+
+        <div class="champ">
+          <label for="prenom">Prenom</label>
+          <input type="text" id="prenom" name="prenom" placeholder="Ex : Yassine">
+        </div>
+
+        <div class="champ">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age" placeholder="Ex : 20" min="1" max="120">
+        </div>
+
+        <div class="champ">
+          <label for="pseudo">Pseudo</label>
+          <input type="text" id="pseudo" name="pseudo" placeholder="Ex : yassine73">
+        </div>
+
+        <div class="champ">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="exemple@email.com">
+        </div>
+
+        <div class="champ">
+          <label for="pays">Pays</label>
+          <input type="text" id="pays" name="pays" placeholder="Ex : Maroc">
+        </div>
+
+        <div class="champ">
+          <label for="devise">Devise</label>
+          <input type="text" id="devise" name="devise" placeholder="Ex : MAD">
+        </div>
+
+        <div class="champ">
+          <label for="couleur">Couleur preferee</label>
+          <select id="couleur" name="couleur">
+            <option value="maroon">Maroon</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="orange">Orange</option>
+            <option value="purple">Purple</option>
+            <option value="teal">Teal</option>
+          </select>
+        </div>
+
+        <div class="champ">
+          <label for="avatar">Avatar (URL, facultatif)</label>
+          <input type="url" id="avatar" name="avatar" placeholder="https://exemple.com/photo.jpg">
+        </div>
+
+        <div class="champ">
+          <label for="motDePasse">Mot de passe</label>
+          <div class="champ-mot-de-passe">
+            <input type="password" id="motDePasse" name="motDePasse" placeholder="8 caracteres min.">
+            <button type="button" id="boutonAfficherMotDePasse" class="bouton-oeil" aria-label="Afficher le mot de passe"><i class="fa-solid fa-eye"></i></button>
+          </div>
+        </div>
+
+        <div class="champ">
+          <label for="confirmationMotDePasse">Confirmer le mot de passe</label>
+          <div class="champ-mot-de-passe">
+            <input type="password" id="confirmationMotDePasse" name="confirmationMotDePasse" placeholder="Repetez le mot de passe">
+            <button type="button" id="boutonAfficherConfirmation" class="bouton-oeil" aria-label="Afficher le mot de passe"><i class="fa-solid fa-eye"></i></button>
+          </div>
+        </div>
+
+        <div class="champ pleine-largeur ligne-case-a-cocher">
+          <input type="checkbox" id="admin" name="admin">
+          <label for="admin">Compte administrateur</label>
+        </div>
+      </div>
+
+      <button type="submit" id="boutonCreer">Creer le compte</button>
+
+      <div id="messageCreation" class="message"></div>
+      <ul id="listeErreurs" class="liste-erreurs"></ul>
+
+      <p class="lien-creation">
+        Deja inscrit ? <a href="login.html">Se connecter</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/createAccount.js"></script>
+</body>
+</html>

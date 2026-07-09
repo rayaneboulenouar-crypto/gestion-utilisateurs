@@ -1,0 +1,72 @@
+<head>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+
+<div class="page-ajouter-utilisateur">
+  <h2>Ajouter un utilisateur</h2>
+
+  <div id="messageAjout" class="message"></div>
+
+  <form id="formulaireAjouterUtilisateur">
+    <div class="grille-formulaire">
+      <div class="champ">
+        <label for="ajoutNom">Nom</label>
+        <input type="text" id="ajoutNom" placeholder="Ex : Alaoui">
+      </div>
+      <div class="champ">
+        <label for="ajoutPrenom">Prenom</label>
+        <input type="text" id="ajoutPrenom" placeholder="Ex : Yassine">
+      </div>
+      <div class="champ">
+        <label for="ajoutAge">Age</label>
+        <input type="number" id="ajoutAge" placeholder="Ex : 20" min="1" max="120">
+      </div>
+      <div class="champ">
+        <label for="ajoutPseudo">Pseudo</label>
+        <input type="text" id="ajoutPseudo" placeholder="Ex : yassine73">
+      </div>
+      <div class="champ">
+        <label for="ajoutEmail">Email</label>
+        <input type="email" id="ajoutEmail" placeholder="exemple@email.com">
+      </div>
+      <div class="champ">
+        <label for="ajoutPays">Pays</label>
+        <input type="text" id="ajoutPays" placeholder="Ex : Maroc">
+      </div>
+      <div class="champ">
+        <label for="ajoutDevise">Devise</label>
+        <input type="text" id="ajoutDevise" placeholder="Ex : MAD">
+      </div>
+      <div class="champ">
+        <label for="ajoutCouleur">Couleur preferee</label>
+        <select id="ajoutCouleur">
+          <option value="maroon">Maroon</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+          <option value="orange">Orange</option>
+          <option value="purple">Purple</option>
+          <option value="teal">Teal</option>
+        </select>
+      </div>
+      <div class="champ">
+        <label for="ajoutAvatar">Avatar (URL, facultatif)</label>
+        <input type="url" id="ajoutAvatar" placeholder="https://exemple.com/photo.jpg">
+      </div>
+      <div class="champ">
+        <label for="ajoutMotDePasse">Mot de passe</label>
+        <div class="champ-mot-de-passe">
+          <input type="password" id="ajoutMotDePasse" placeholder="8 caracteres min.">
+          <button type="button" id="boutonAfficherMotDePasseAjout" class="bouton-oeil" aria-label="Afficher le mot de passe"><i class="fa-solid fa-eye"></i></button>
+        </div>
+      </div>
+      <div class="champ pleine-largeur ligne-case-a-cocher">
+        <input type="checkbox" id="ajoutAdmin">
+        <label for="ajoutAdmin">Compte administrateur</label>
+      </div>
+    </div>
+
+    <button type="submit" id="boutonAjouterUtilisateur">Ajouter</button>
+
+    <ul id="listeErreursAjout" class="liste-erreurs"></ul>
+  </form>
+</div>

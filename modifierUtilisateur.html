@@ -1,0 +1,52 @@
+<head>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+
+<div class="page-modifier-utilisateur">
+  <h2>Modifier l'utilisateur</h2>
+
+  <div id="messageModification" class="message"></div>
+  <p id="chargementModification" class="indicateur-chargement"></p>
+
+  <form id="formulaireModifierUtilisateur">
+    <div class="grille-formulaire">
+      <div class="champ">
+        <label for="modifNom">Nom</label>
+        <input type="text" id="modifNom">
+      </div>
+      <div class="champ">
+        <label for="modifPrenom">Prenom</label>
+        <input type="text" id="modifPrenom">
+      </div>
+      <div class="champ">
+        <label for="modifAge">Age</label>
+        <input type="number" id="modifAge" min="1" max="120">
+      </div>
+      <div class="champ">
+        <label for="modifPseudo">Pseudo</label>
+        <input type="text" id="modifPseudo">
+      </div>
+      <div class="champ">
+        <label for="modifEmail">Email</label>
+        <input type="email" id="modifEmail">
+      </div>
+      <div class="champ">
+        <label for="modifPays">Pays</label>
+        <input type="text" id="modifPays">
+      </div>
+      <div class="champ">
+        <label for="modifDevise">Devise</label>
+        <input type="text" id="modifDevise">
+      </div>
+      <div class="champ pleine-largeur ligne-case-a-cocher">
+        <input type="checkbox" id="modifAdmin">
+        <label for="modifAdmin">Compte administrateur</label>
+      </div>
+    </div>
+
+    <button type="submit" id="boutonEnregistrerModification">Enregistrer</button>
+    <button type="button" id="boutonAnnulerModification">Annuler</button>
+
+    <ul id="listeErreursModification" class="liste-erreurs"></ul>
+  </form>
+</div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion - Espace Stagiaire</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+  <div class="conteneur-login">
+    <form id="formulaireLogin" class="carte-login">
+      <h1>Connexion</h1>
+      <p class="sous-titre">Connectez-vous a votre espace</p>
+
+      <div class="champ">
+        <label for="pseudo">Nom d'utilisateur</label>
+        <input type="text" id="pseudo" name="pseudo" placeholder="Ex : yassine73">
+      </div>
+
+      <div class="champ">
+        <label for="motDePasse">Mot de passe</label>
+        <div class="champ-mot-de-passe">
+          <input type="password" id="motDePasse" name="motDePasse" placeholder="Votre mot de passe">
+          <button type="button" id="boutonAfficherMotDePasse" class="bouton-oeil" aria-label="Afficher le mot de passe"><i class="fa-solid fa-eye"></i></button>
+        </div>
+      </div>
+
+      <div class="ligne-case-a-cocher">
+        <input type="checkbox" id="seRappeler" name="seRappeler">
+        <label for="seRappeler">Se rappeler de moi</label>
+      </div>
+
+      <button type="submit" id="boutonLogin">LOGIN</button>
+
+      <div id="messageLogin" class="message"></div>
+      <ul id="listeErreurs" class="liste-erreurs"></ul>
+
+      <p class="lien-creation">
+        Pas encore inscrit ? <a href="createAccount.html">Create an account</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="js/validation.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

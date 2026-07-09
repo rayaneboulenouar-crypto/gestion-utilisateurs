@@ -1,0 +1,51 @@
+/* login.css */
+
+.conteneur-login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eef2ee;
+  padding: 20px;
+}
+
+.carte-login {
+  background-color: white;
+  padding: 36px 34px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 340px;
+}
+
+.carte-login h1 {
+  text-align: center;
+  margin: 0 0 4px 0;
+}
+
+.carte-login .sous-titre {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin: 0 0 20px 0;
+}
+
+.carte-login .champ {
+  margin-bottom: 14px;
+}
+
+.carte-login button[type="submit"] {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.lien-creation {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.lien-creation a {
+  color: #2f6b2f;
+  font-weight: bold;
+}

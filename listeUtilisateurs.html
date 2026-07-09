@@ -1,0 +1,31 @@
+<head>
+  <link rel="icon" type="image/svg+xml" href="../images/favicon.svg">
+</head>
+
+<div class="page-utilisateurs">
+  <h2>Liste des utilisateurs</h2>
+
+  <div id="messageUtilisateurs" class="message"></div>
+
+  <input type="text" id="rechercheUtilisateurs" class="barre-recherche"
+         placeholder="Rechercher par nom, prenom, pseudo ou email...">
+
+  <p id="chargementUtilisateurs" class="indicateur-chargement"></p>
+  <p id="messageAucunUtilisateur" class="message message-info" style="display:none;">Aucun utilisateur trouvé.</p>
+
+  <table id="tableUtilisateurs">
+    <thead>
+      <tr>
+        <th>Pseudo</th>
+        <th>Nom</th>
+        <th>Prenom</th>
+        <th>Email</th>
+        <th>Type</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="corpsTableUtilisateurs">
+      <!-- Lignes generees en JavaScript -->
+    </tbody>
+  </table>
+</div>
